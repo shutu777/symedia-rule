@@ -14,7 +14,6 @@ https://raw.githubusercontent.com/shutu777/symedia-rule/refs/heads/main/custom_w
 ## 👥 自定义制作组
 
 ```
-https://raw.githubusercontent.com/pipi20xx/555999/refs/heads/main/anime/Group.txt
 https://raw.githubusercontent.com/shutu777/symedia-rule/refs/heads/main/custom_group.txt
 ```
 
