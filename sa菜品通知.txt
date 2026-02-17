@@ -1,0 +1,40 @@
+{
+    "title": "🛵 热腾腾的「{{ title_year }} {{ season_episode if season_episode else '' }}」已送达！🍕",
+    "text": (
+        "{% if vote_average %}🌟 食客推荐指数：{{ vote_average }}/10\n{% endif %}"
+        "📚 菜品类型：{{ media_type }}\n"
+        "{% if category %}🏷️ 口味标签：{{ category }}\n{% endif %}"
+        "{% if resource_quality %}🌶️ 新鲜度/画质：{{ resource_quality }}\n{% endif %}"
+        "🍽️ 份量：{{ file_count }}份\n"
+        "⚖️ 总重量：{{ total_size }}\n"
+        "🎬 订单号 (TMDB)：{{ tmdbid }}\n"
+        "{% if release_group %}👨‍🍳 出品方：{{ release_group }}\n{% endif %}"
+        "{% if time_usage %}⏱️ 派送用时：{{ time_usage }}\n{% endif %}"
+    )
+}
+
+{
+    "title": "{% if action == '新入库' and media_type == '电影' %}🎬 {% elif action == '新入库' and media_type == '剧集' %}📺 {% elif action == '新入库' and media_type == '有声书' %}📚 {% elif action == '新入库' %}🆕 {% elif action == '测试' %}🧪 {% elif action == '开始播放' %}▶️ {% elif action == '停止播放' %}⏹️ {% elif action == '登录成功' %}✅ {% elif action == '登录失败' %}❌ {% elif action == '标记了' %}🏷️ {% endif %}{% if user_name %}【{{ user_name }}】{% endif %}{{ action }}{% if media_type == '电影' %}🎞️{% elif media_type == '剧集' %}📺{% endif %} {{ item_name }}{% if year %} ({{ year }}){% endif %}{% if season_episode %} {{ season_episode }}{% endif %}",
+    "text": (
+        "{% if vote_average %}🌟 食客推荐指数：{{ vote_average }}/10\n{% endif %}"
+        "📚 菜品类型：{{ media_type }}\n"
+        "{% if category %}🏷️ 口味标签：{{ category }}\n{% endif %}"
+        "{% if resource_quality %}🌶️ 新鲜度/画质：{{ resource_quality }}\n{% endif %}"
+        "{% if file_count %}🍽️ 份量：{{ file_count }}份\n{% endif %}"
+        "{% if total_size %}⚖️ 总重量：{{ total_size }}\n{% endif %}"
+        "{% if video_codec %}🎞️ 视频编码：{{ video_codec }}\n{% endif %}"
+        "{% if audio_codec %}🔊 音频编码：{{ audio_codec }}\n{% endif %}"
+        "{% if resolution %}🖼️ 分辨率：{{ resolution }}\n{% endif %}"
+        "{% if percentage %}🔄 用餐进度：{{ percentage }}%\n{% endif %}"
+        "{% if ip_address %}🌐 配送地址：{{ ip_address }}\n{% endif %}"
+        "{% if device_name %}📱 配送设备：{{ client }} {{ device_name }}\n{% endif %}"
+        "{% if tmdbid %}🎬 订单号 (TMDB)：{{ tmdbid }}\n{% endif %}"
+        "{% if imdbid %}🎞️ 订单号 (IMDB)：{{ imdbid }}\n{% endif %}"
+        "{% if release_group %}👨‍🍳 出品方：{{ release_group }}\n{% endif %}"
+        "{% if time_usage %}⏱️ 派送用时：{{ time_usage }}\n{% endif %}"
+        "{% if source_dir %}📁 取货地址：{{ source_dir }}\n{% endif %}"
+        "{% if dest_dir %}📦 收货地址：{{ dest_dir }}\n{% endif %}"
+        "🕒 派送时间：{{ now_time }}\n"
+        "{% if overview %}📝 菜品介绍：{{ overview }}{% endif %}"
+    )
+}

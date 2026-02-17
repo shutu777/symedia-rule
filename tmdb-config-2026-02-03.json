@@ -1,0 +1,432 @@
+{
+  "version": "1.0",
+  "exportTime": "2026-02-03T09:36:29.187Z",
+  "tmdbDirectoryConfig": {
+    "特摄电影-title": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/特摄电影",
+      "priority": 1,
+      "conditions": {
+        "title_keyword": "tokusatsu,ultraman,奥特曼,特摄,特攝,铠甲勇士,假面骑士,金甲战士,超神战队,巨神战击队,金光布袋戏,布袋戏,苦海女神龙,霹雳神州,霹雳英雄,霹雳震寰宇,霹雳天命,云州大儒侠史艳文,霹雳布袋戏,Power Rangers,超凡战队,恐龙战队,VR Troopers,Beetleborgs,BIMA,神鹰勇士,Cicak-Man,Shaktimaan,Darna"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "R级电影-title": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/R级电影",
+      "priority": 1,
+      "conditions": {
+        "title_keyword": "聊斋艳谭,肉蒲团,蜜桃成熟时,金瓶梅,大内密探之零零性性,聊斋之艳蛇,超淫特攻队,Big波诱惑,玉蒲团,足本玉蒲团,慈禧秘密生活,飞虎出征,现代应召女郎,夜生活女王之霞姐传奇,囡囡"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "特摄电影-tmdb": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/特摄电影",
+      "priority": 2,
+      "conditions": {
+        "tmdb_keyword": "tokusatsu,ultraman,Power Rangers,VR Troopers,Beetleborgs,BIMA,Cicak-Man,Shaktimaan,Darna"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "R级电影-tmdb": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/R级电影",
+      "priority": 2,
+      "conditions": {
+        "tmdb_keyword": "erotic movie,eroticism,softcore,sexual fantasy,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation,blow job,unsimulated sex,sexual torture,pink film"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "动画电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/动画电影",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "16"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "纪录电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/纪录电影",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "99"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "演唱会-华语歌手演唱会": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/演唱会/华语歌手演唱会",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "10402,!18,!12,!16,!14,!28,!35,!36,!27,!37,!53,!80,!99,!878,!9648,!10749,!10751,!10752,!10762,!10764,!10767,!10770",
+        "original_language": "zh,cn,bo,za"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "演唱会-亚洲歌手演唱会": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/演唱会/亚洲歌手演唱会",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "10402,!18,!12,!16,!14,!28,!35,!36,!27,!37,!53,!80,!99,!878,!9648,!10749,!10751,!10752,!10762,!10764,!10767,!10770",
+        "original_language": "ja,ko,id,th,ms,tl,vi"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "演唱会-欧美歌手演唱会": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/演唱会/欧美歌手演唱会",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "10402,!18,!12,!16,!14,!28,!35,!36,!27,!37,!53,!80,!99,!878,!9648,!10749,!10751,!10752,!10762,!10764,!10767,!10770",
+        "original_language": "!zh,!cn,!bo,!za,!ja,!ko,!id,!th,!ms,!tl,!vi"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "华语电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/华语电影",
+      "priority": 4,
+      "conditions": {
+        "original_language": "zh,cn,bo,za"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "日本电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/日本电影",
+      "priority": 4,
+      "conditions": {
+        "original_language": "ja"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "韩国电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/韩国电影",
+      "priority": 4,
+      "conditions": {
+        "original_language": "ko"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "印度电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/印度电影",
+      "priority": 4,
+      "conditions": {
+        "original_language": "hi",
+        "production_countries": "IN"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "外语电影": {
+      "media_types": [
+        "movie"
+      ],
+      "path": "电影/外语电影",
+      "priority": 5,
+      "conditions": {
+        "original_language": "!cn,!zh,!bo,!za,!hi,!ja,!ko"
+      },
+      "rename_templates": {
+        "movie": "movie_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "特摄剧-title": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/特摄剧",
+      "priority": 1,
+      "conditions": {
+        "title_keyword": "tokusatsu,ultraman,奥特曼,特摄,特攝,铠甲勇士,假面骑士,金甲战士,超神战队,巨神战击队,金光布袋戏,布袋戏,苦海女神龙,霹雳神州,霹雳英雄,霹雳震寰宇,霹雳天命,云州大儒侠史艳文,霹雳布袋戏,Power Rangers,超凡战队,恐龙战队,VR Troopers,Beetleborgs,BIMA,神鹰勇士,Cicak-Man,Shaktimaan,Darna"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "特摄剧-tmdb": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/特摄剧",
+      "priority": 2,
+      "conditions": {
+        "tmdb_keyword": "tokusatsu,ultraman,Power Rangers,VR Troopers,Beetleborgs,BIMA,Cicak-Man,Shaktimaan,Darna"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "港剧-tmdb": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/港剧",
+      "priority": 2,
+      "conditions": {
+        "tmdb_keyword": "tvb,hong kong,HK,TVB,香港亚洲电视",
+        "origin_country": "HK"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "综艺": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/综艺",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "10764,10767"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "纪录片(剧集)": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/纪录片",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "99"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "国漫": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/国漫",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "16,!10762",
+        "production_countries": "CN,TW,HK"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "日番": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/日番",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "16,!10762",
+        "production_countries": "JP"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "欧美漫": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/欧美动漫",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "16,!10762",
+        "production_countries": "US,GB,FR,DE,CA,!CN,!TW,!HK"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "儿童": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/儿童",
+      "priority": 3,
+      "conditions": {
+        "genre_ids": "10762,!10767,!10764"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "港剧": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/港剧",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "HK"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "国产剧": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/国产剧",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "CN,TW"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "韩剧": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/韩剧",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "KR"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "日剧": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/日剧",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "JP"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "东南亚": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/东南亚",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "TH,VN,ID,MY,PH,MM,SG"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "欧美剧": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/欧美剧",
+      "priority": 4,
+      "conditions": {
+        "production_countries": "US,GB,FR,DE,ES,IT,CA"
+      },
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    },
+    "未分类": {
+      "media_types": [
+        "tv"
+      ],
+      "path": "电视剧/未分类",
+      "priority": 5,
+      "conditions": {},
+      "rename_templates": {
+        "tv": "tv_detailed"
+      },
+      "title_style": "with_year_tmdbid"
+    }
+  }
+}

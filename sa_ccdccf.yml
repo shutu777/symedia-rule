@@ -1,0 +1,442 @@
+# ===================================================================================================
+# 
+#                       ||     
+#                       ||                        ||
+#                       ||                       || |
+#   ||       ||       ||||     ||       ||       || 
+# ||||||   ||||||   ||||||   ||||||   ||||||   |||||||
+# ||  ||   ||  ||   ||  ||   ||  ||   ||  ||     ||  
+# |        |        |   ||   |        |          ||  
+# |   ||   |   ||   |   ||   |   ||   |   ||     ||  
+# ||  ||   ||  ||   ||  ||   ||  ||   ||  ||     ||  
+# ||||||   ||||||   ||||||   ||||||   ||||||     ||  
+#   |||      |||     |||||     |||      |||      ||  
+#
+# ===================================================================================================
+# Symedia 媒体库分类规则 version 3.0.0
+# 精心设计 by ccdccf@爱影
+# 特别鸣谢：TMDB API 数据支持
+# ===================================================================================================
+# 2025.12月开启3.0版本规则更新，融入Symedia新语法规则
+# ===================================================================================================
+#   genre_ids 内容类型  "28" (动作), "16" (动画)
+#   original_language 原始语言  "zh,en,ja"
+#   year 年份 "2020-2025"
+#   production_countries 制作国家（电影）   "US,CN,JP"
+#   origin_country 制作国家（电视剧）    "US,CN,JP"
+#   keywords  关键词（从TMDB标题匹配）    "漫威,复仇者"
+#   include_keywords  TMDB 标签关键词    "tokusatsu,superhero"
+#   filename_keywords  文件名里有的词 举例:filename_keywords: "remux"
+#   series_directors 导演系列   "诺兰,斯皮尔伯格"
+#   series_actors  演员系列 "汤姆·克鲁斯,周星驰"
+#   vote_average  TMDB评分 使用语法为范围 举例: vote_average:0.1-4.9
+#   + 语法  必需满足的条件 必须包含
+#   - 语法  必须排除的条件 必须排除
+#   ? 语法  没有?前缀 = 必须匹配（所有这类属性都要满足）| 有?前缀 = 可选匹配（至少满足其中一个）
+# ===================================================================================================
+movie:
+   
+   # 优先级1：特摄剧
+  
+  特摄剧/特摄剧电影:
+    ?include_keywords: "tokusatsu,ultraman,kaiju,特摄,特攝,铠甲勇士,金甲战士,超神战队,巨神战击队,Power Rangers,超凡战队,恐龙战队,VR Troopers,Beetleborgs,BIMA,神鹰勇士,Cicak-Man,Shaktimaan,Darna"
+    ?keywords: "奥特曼,铠甲勇士,金甲战士,超神战队,巨神战击队"
+    series_keywords: "奥特曼,铠甲勇士"
+
+  # 优先级2：综艺电影
+  
+  综艺/综艺电影:
+    keywords: "爸爸去哪儿,奔跑吧！兄弟,极限挑战,德云社,真人秀电影,中秋晚会,春节联欢晚会,元宵晚会,WWE,青春环游记,向往的生活,中餐厅,亲爱的客栈"
+    series_keywords: "中央广播电视总台春节联欢晚会,中央广播电视总台中秋晚会,卫视春节联欢晚会,元宵晚会,德云社"
+  
+  # 优先级3：R级电影
+  
+  R级/R级华语电影:
+    original_language: "zh,cn"
+    ?keywords: "聊斋艳谭,肉蒲团,蜜桃成熟时,金瓶梅,大内密探之零零性性,聊斋之艳蛇，超淫特攻队，Big波诱惑，玉蒲团,足本玉蒲团，慈禧秘密生活，飞虎出征，现代应召女郎，夜生活女王之霞姐传奇，囡囡"
+    ?include_keywords: "eroticism,softcore,sexual fantasy,erotic movie,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation"
+
+  R级/R级亚洲电影:
+    ?origin_country: "JP,KR"
+    ?original_language: "ja,ko,id,th,ms,tl,vi"
+    include_keywords: "eroticism,softcore,sexual fantasy,erotic movie,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation"
+  
+  R级/R级欧美电影:
+    include_keywords: "eroticism,softcore,sexual fantasy,erotic movie,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation"
+  
+  # 优先级4：纪录片
+  
+  纪录片/纪录片电影/华语纪录片电影:
+    genre_ids: "99,-10402,-16"
+    ?original_language: "zh,cn"
+    ?origin_country: "CN,TW,HK,MO"
+    series_keywords: "阅兵"
+  
+  纪录片/纪录片电影/外语纪录片电影:
+    original_language: "-zh,-cn"
+    genre_ids: "99,-16,-10402"
+
+  # 优先级5：演唱会
+  
+  演唱会/华语歌手演唱会:
+    genre_ids: "10402,-16"
+    ?original_language: "zh,cn,-ja"
+    ?origin_country: "CN,TW,HK,MO,-JP"
+    keywords: "演唱会,巡演,演出,交响乐,奇妙夜,歌剧,林忆莲,刘若英,喜乐会,音乐会,音乐剧,音乐·会,谭咏麟,摇滚,MV精选集,特别节目,美丽的呼声听证会,Live,郭富城,日本武道馆,Concert,Tour,Performance,Show,Stage,现场,現場,巡演,巡迴,巡回,演出,音乐节,音樂節,歌会,湾区升明月,音乐集,演奏,音乐秀"
+    series_actors: "周杰伦,林俊杰,王力宏,张韶涵,陈奕迅,张学友,孙燕姿,李宗盛"
+    series_keywords: "湾区升明月"
+  
+  演唱会/日韩歌手演唱会:
+    genre_ids: "10402,-16"
+    ?original_language: "ja,ko"
+    ?origin_country: "JP,KR"
+    keywords: "Hatsune miku,演唱会,巡演,演出,交响乐,奇妙夜,酒井法子,歌剧,少女时代,喜乐会,音乐会,酒井法子,音乐剧,特别节目,摇滚,MV精选集,Live,日本武道馆,初音未来,魔法未来,Concert,米津玄师,Tour,Performance,Show,Stage,现场,現場,巡演,巡迴,巡回,演出,音乐节,音樂節,歌会,音乐集,演奏,音乐秀"
+    series_actors: "初音未来"
+  
+  演唱会/欧美歌手演唱会:
+    genre_ids: "10402,-16"
+    keywords: "演唱会,巡演,演出,交响乐,奇妙夜,歌剧,喜乐会,音乐会,音乐·会,音乐剧,特别节目,摇滚,MV精选集,Live,日本武道馆,Concert,Tour,Performance,Show,Stage,现场,現場,巡演,巡迴,巡回,演出,音乐节,音樂節,歌会,音乐集,演奏,音乐秀,音乐盛宴"
+    series_keywords: "维也纳新年音乐会"
+
+
+  # 优先级6：动画电影
+  
+  #如果你想给动画电影单独做个Remux电影划分，则把下面三个井号去掉，本行的井号不要删。
+  #动漫/动画电影/Remux动画电影:
+    #genre_ids: "16"
+    #filename_keywords: "remux,REMUX,Remux"
+  
+  动漫/动画电影/华语动画电影:
+    genre_ids: "16"
+    ?original_language: "zh,cn"
+    ?origin_country: "CN,TW,HK,MO"
+    series_keywords: "喜羊羊与灰太狼,熊出没"
+
+  动漫/动画电影/日韩动画电影:
+    genre_ids: "16"
+    ?original_language: "ja,ko"
+    ?origin_country: "JP,KR"
+    series_keywords: "哆啦A梦,海贼王,火影忍者,名侦探柯南,死神,圣斗士,蜡笔小新,龙珠,宝可梦,鬼灭之刃,福音战士"
+    series_directors: "新海诚,宫崎骏"
+      
+  动漫/动画电影/欧美动画电影:
+    genre_ids: "16"
+    series_keywords: "猫和老鼠,海底小纵队,汪汪队立大功,玩具总动员,小黄人,功夫熊猫"
+
+  # 优先级7：常规电影
+
+  #Remux电影独立分区，若启用（删除下面四行的井号即可启用，本行的井号不要删），会导致后面的地区分区电影里不再含有爱影和LGNB的Remux版本
+  #电影/Remux电影/爱影-Remux:
+   # filename_keywords: "remux,REMUX,Remux,+AY"
+
+  #电影/Remux电影/LGNB-Remux:
+    #filename_keywords: "remux,REMUX,Remux,+oSpecialCN"
+
+  #低分电影独立分区，若启用（删除下面四行的井号即可启用，本行的井号不要删），会导致后面的地区分区电影里不再含有tmdb评分在参数设定内的影片
+  #电影/低分电影:
+    #vote_average: 0.1-5.6
+      
+  电影/华语电影:
+    original_language: "zh,cn,bo,za"
+    origin_country: "CN,TW,HK,MO"
+    series_actors: "周星驰,成龙,沈腾,王宝强,吴京"
+    series_directors: "冯小刚,王家卫,张艺谋"
+  
+  电影/日本电影:
+    ?origin_country: "JP,-US"
+    ?original_language: "ja"
+  
+  电影/韩国电影:
+    ?origin_country: "KR"
+    ?original_language: "ko"
+  
+  电影/东南亚电影:
+    original_language: "id,th,ms,tl,vi"
+  
+  电影/印度电影:
+    keywords: "-战马"
+    ?origin_country: "IN,-CN"
+    ?original_language: "hi,ta,te,kn,mr,gu,pa"
+  
+  #DC和漫威宇宙系列由TMDB里的标签关键词决定，很有可能不全，需要后期自己修复，明白此原则情况下开启，若启用（删除下面5行的井号即可启用，本行的井号不要删），则后续欧美电影目录的独立条目不再含有这类系列的电影。
+  #电影/欧美电影/漫威系列:
+    #include_keywords: "marvel cinematic universe (mcu)"
+    #series_keywords: "钢铁侠,美国队长,雷神,蜘蛛侠,复仇者联盟,死侍,银河护卫队,奇异博士,黑豹,惊奇队长,蚁人,"
+  
+  #电影/欧美电影/DC系列:
+    #include_keywords: "dc extended universe (dceu)"
+  
+  电影/欧美电影/名家系列:  
+    series_actors: "莱昂纳多·迪卡普里奥,尼古拉斯·凯奇,汤姆·克鲁斯,基努·里维斯,威尔·史密斯"
+    series_directors: "克里斯托弗·诺兰,史蒂文·斯皮尔伯格"
+  
+  电影/欧美电影:  
+     
+    
+
+tv:
+  
+  # 优先级 1：特摄剧
+  特摄剧/特摄剧剧集:
+    ?include_keywords: "tokusatsu,ultraman"
+    ?keywords: "tokusatsu,特摄,特攝,铠甲勇士,金甲战士,超神战队,巨神战击队,布袋戏,苦海女神龙,霹雳神州,霹雳英雄,霹雳震寰宇,霹雳天命,云州大儒侠史艳文,Power Rangers,超凡战队,恐龙战队,VR Troopers,Beetleborgs,BIMA,神鹰勇士,Cicak-Man,Shaktimaan,Darna"
+    series_keywords: "奥特曼,布袋戏,铠甲勇士"
+
+  # 优先级 2：综艺剧集
+  
+  综艺/综艺剧集/华语综艺:
+    genre_ids: "10764,10767"
+    ?original_language: "zh,cn,bo,za"
+    ?origin_country: "CN,TW,HK,MO"
+
+  综艺/综艺剧集/外语综艺:
+    genre_ids: "10764,10767"
+  
+  # 优先级3：R级剧集
+  
+  R级/R级剧集:
+    ?keywords: "聊斋艳谭,肉蒲团,蜜桃成熟时,金瓶梅,大内密探之零零性性,聊斋之艳蛇，超淫特攻队，Big波诱惑，足本玉蒲团，慈禧秘密生活，飞虎出征，现代应召女郎，夜生活女王之霞姐传奇，囡囡"
+    ?include_keywords: "eroticism,softcore,sexual fantasy,erotic movie,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation"
+  
+  # 优先级4：纪录片
+  
+  纪录片/纪录片剧集/华语纪录片:
+    genre_ids: "99,-10402,-16"
+    ?original_language: "zh,cn,bo,za"
+    ?origin_country: "CN,TW,HK,MO"
+  
+  纪录片/纪录片剧集/外语纪录片:
+    genre_ids: "99,-10402,-16"
+
+  # 优先级5：动漫，注意，此处将有属于儿童系列（ID10762）的分流到儿童一级目录下，故动漫的一级目录下会有相当一部分数量不在，非常主观，如果你介意这样分类可以把儿童动画放到动漫的子目录下。
+  
+  儿童/儿童动画片:
+    genre_ids: "+16,10762"
+    #因为有相当数量的日番在个人主观观点里放到日番更合适，所以下面的keywords里采用排除语法进行筛选排除，你如果也遇到不想放到儿童的动画片，继续照葫芦画瓢添加即可
+    keywords: "-数码宝贝,-名侦探柯南,-蜡笔小新,-宝可梦,-哆啦A梦"
+    series_keywords: "喜羊羊,好奇世界,猫和老鼠,蓝猫淘气三千问,宝宝巴士,熊出没,猪猪侠"
+
+  动漫/国漫:
+    genre_ids: "16"
+    origin_country: "CN,TW,HK,MO"
+    keywords: "-名侦探柯南"
+  
+  动漫/日番:
+    genre_ids: "16"
+    ?origin_country: "JP,KR"
+    ?original_language: "ja,ko"
+  
+  动漫/欧美漫:
+    genre_ids: "16"
+
+  # 优先级6：剧集
+  儿童/儿童剧集:
+    genre_ids: "10762"
+  
+  #低分剧集独立分区，若启用（删除下面四行的井号即可启用，本行的井号不要删），会导致后面的地区分区剧集里不再含有tmdb评分在参数设定内的影片
+  #剧集/低分剧集:
+    #vote_average:0.1-5.6
+  
+  剧集/国产剧集:
+    original_language: "zh,cn"
+    -origin_country: "HK"
+    origin_country: "CN"
+  
+  剧集/港台剧集:
+    original_language: "zh,cn"
+  
+  剧集/日本剧集:
+    ?origin_country: "JP"
+    ?original_language: "ja"
+  
+  剧集/韩国剧集:
+    ?origin_country: "KR"
+    ?original_language: "ko"
+  
+  剧集/其他亚洲剧集:
+    ?origin_country: "IN"
+    ?original_language: "id,th,ms,hi,tl,vi,hi,ta,te,kn,mr,gu,pa"
+  
+  剧集/欧美剧集:
+
+
+# ============================================================================
+# TMDB 类型ID字典 - 由ccdccf@爱影整理
+# ============================================================================
+## genre_ids 内容类型 字典，注意部分中英文是不一样的
+# 28  Action
+# 12  Adventure
+# 16  Animation
+# 35  Comedy
+# 80  Crime
+# 99  Documentary
+# 18  Drama
+# 10751 Family
+# 14  Fantasy
+# 36  History
+# 27  Horror
+# 10402 Music
+# 9648  Mystery
+# 10749 Romance
+# 878  Science Fiction
+# 10770 TV Movie
+# 53  Thriller
+# 10752 War
+# 37  Western
+# 28  动作
+# 12  冒险
+# 16  动画
+# 35  喜剧
+# 80  犯罪
+# 99  纪录
+# 18  剧情
+# 10751 家庭
+# 14  奇幻
+# 36  历史
+# 27  恐怖
+# 10402 音乐
+# 9648  悬疑
+# 10749 爱情
+# 878 科幻
+# 10770 电视电影
+# 10765 科幻奇幻
+# 10768 战争政治
+# 53  惊悚
+# 10752 战争
+# 37  西部
+
+## original_language 语种 字典
+# af  南非语
+# ar  阿拉伯语
+# az  阿塞拜疆语
+# be  比利时语
+# bg  保加利亚语
+# ca  加泰隆语
+# cs  捷克语
+# cy  威尔士语
+# da  丹麦语
+# de  德语
+# dv  第维埃语
+# el  希腊语
+# en  英语
+# eo  世界语
+# es  西班牙语
+# et  爱沙尼亚语
+# eu  巴士克语
+# fa  法斯语
+# fi  芬兰语
+# fo  法罗语
+# fr  法语
+# gl  加里西亚语
+# gu  古吉拉特语
+# he  希伯来语
+# hi  印地语
+# hr  克罗地亚语
+# hu  匈牙利语
+# hy  亚美尼亚语
+# id  印度尼西亚语
+# is  冰岛语
+# it  意大利语
+# ja  日语
+# ka  格鲁吉亚语
+# kk  哈萨克语
+# kn  卡纳拉语
+# ko  朝鲜语
+# kok 孔卡尼语
+# ky  吉尔吉斯语
+# lt  立陶宛语
+# lv  拉脱维亚语
+# mi  毛利语
+# mk  马其顿语
+# mn  蒙古语
+# mr  马拉地语
+# ms  马来语
+# mt  马耳他语
+# nb  挪威语(伯克梅尔)
+# nl  荷兰语
+# ns  北梭托语
+# pa  旁遮普语
+# pl  波兰语
+# pt  葡萄牙语
+# qu  克丘亚语
+# ro  罗马尼亚语
+# ru  俄语
+# sa  梵文
+# se  北萨摩斯语
+# sk  斯洛伐克语
+# sl  斯洛文尼亚语
+# sq  阿尔巴尼亚语
+# sv  瑞典语
+# sw  斯瓦希里语
+# syr 叙利亚语
+# ta  泰米尔语
+# te  泰卢固语
+# th  泰语
+# tl  塔加路语
+# tn  茨瓦纳语
+# tr  土耳其语
+# ts  宗加语
+# tt  鞑靼语
+# uk  乌克兰语
+# ur  乌都语
+# uz  乌兹别克语
+# vi  越南语
+# xh  班图语
+# zh  中文
+# cn  中文
+# zu  祖鲁语
+
+## origin_country 国家地区 字典
+# AR  阿根廷
+# AU  澳大利亚
+# BE  比利时
+# BR  巴西
+# CA  加拿大
+# CH  瑞士
+# CL  智利
+# CO  哥伦比亚
+# CZ  捷克
+# DE  德国
+# DK  丹麦
+# EG  埃及
+# ES  西班牙
+# FR  法国
+# GR  希腊
+# HK  香港
+# IL  以色列
+# IN  印度
+# IQ  伊拉克
+# IR  伊朗
+# IT  意大利
+# PJ  日本
+# MM  缅甸
+# MO  澳门
+# MX  墨西哥
+# MY  马来西亚
+# NL  荷兰
+# NO  挪威
+# PH  菲律宾
+# PK  巴基斯坦
+# PL  波兰
+# RU  俄罗斯
+# SE  瑞典
+# SG  新加坡
+# TH  泰国
+# TR  土耳其
+# US  美国
+# VN  越南
+# CN  中国 内地
+# GB  英国
+# TW  中国台湾
+# NZ  新西兰
+# SA  沙特阿拉伯
+# LA  老挝
+# KP  朝鲜 北朝鲜
+# KR  韩国 南朝鲜
+# PT  葡萄牙
+# MN  蒙古国 蒙古
+
+# ============================================================================
+# 规则制作完成 - ccdccf@爱影
+# 特别鸣谢：TMDB API 提供的数据支持
+# ============================================================================

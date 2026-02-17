@@ -1,0 +1,40 @@
+# 自定义渲染词
+(?<=[\W_])4k(?=[\W_]) => 2160p
+(?i)\.H\.264\. => .AVC.
+(?i)\.H\.265\. => .HEVC.
+(?i)\.H264\. => .AVC.
+(?i)\.H265\. => .HEVC.
+(?i)\.H\.264(?=[\W_]) => .AVC
+(?i)\.H\.265(?=[\W_]) => .HEVC
+(?i)\.H264(?=[\W_]) => .AVC
+(?i)\.H265(?=[\W_]) => .HEVC
+(?i)\.x264\. => .AVC.
+(?i)\.x265\. => .HEVC.
+(?i)\.x264(?=[\W_]) => .AVC
+(?i)\.x265(?=[\W_]) => .HEVC
+Netflix.WEB-DL => WEB-DL
+Amazon Prime.WEB-DL => WEB-DL
+AppleTV.WEB-DL => WEB-DL
+Disney.WEB-DL => WEB-DL
+IQ.WEB-DL => WEB-DL
+KKTV.WEB-DL => WEB-DL
+TVING.WEB-DL => WEB-DL
+iTunes.WEB-DL => WEB-DL
+friDay.WEB-DL => WEB-DL
+MyTVSuper.WEB-DL => WEB-DL
+\.(?:[0-5]\dfps|59fps|10-bit|10bit)
+# 关于我转生变成史莱姆这档事
+@?{[tmdbid=82684;type=tv;s=1;e=25-48]} => {[s=2;e=EP-24]}
+@?{[tmdbid=82684;type=tv;s=1;e=49-72]} => {[s=3;e=EP-48]}
+# 咒术回战
+@?{[tmdbid=95479;type=tv;s=2;e=1-12]} => {[s=1;e=EP+24]}
+@?{[tmdbid=95479;type=tv;s=3;e=1-12]} => {[s=1;e=EP+47]}
+# 绝对可怜小孩
+@?{[tmdbid=42926;type=tv;s=1;e=27-51]} => {[s=2;e=EP-26]}
+# 机动战士高达逆A
+@?{[tmdbid=37546;type=tv;s=1;e=26-50]} => {[s=2;e=EP-25]}
+# 【我推的孩子】
+@?{[tmdbid=203737;type=tv;s=2;e=1-13]} => {[s=1;e=EP+11]}
+@?{[tmdbid=203737;type=tv;s=3;e=1-11]} => {[s=1;e=EP+24]}
+# 葬送的芙莉莲
+@?{[tmdbid=209867;type=tv;s=2;e=1-28]} => {[s=1;e=EP+28]}

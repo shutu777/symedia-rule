@@ -1,0 +1,40 @@
+(?<=^|[\W_])Baha(?=$|[\W_]) => -Baha
+(?<=^|[\W_])KKTV(?=$|[\W_]) => -KKTV
+(?<=^|[\W_])Hami(?=$|[\W_]) => -Hami
+(?<=^|[\W_])Abema(?=$|[\W_]) => -Abema
+(?<=^|[\W_])B-Global(?=$|[\W_]) => -B-Global
+(?<=^|[\W_])MyVideo(?=$|[\W_]) => -MyVideo
+(?<=^|[\W_])MyTVSuper(?=$|[\W_]) => -MyTVSuper
+(?<=^|[\W_])Hulu(?=$|[\W_]) => -Hulu
+(?<=^|[\W_])TVING(?=$|[\W_]) => -TVING
+(?<=^|[\W_])LINETV(?=$|[\W_]) => -LINETV
+(?<=^|[\W_])Bilibili(?=$|[\W_]) => -Bilibili
+(?<=^|[\W_])IQ(?=$|[\W_]) => -IQ
+(?<=^|[\W_])Viu(?=$|[\W_]) => -Viu
+(?<=^|[\W_])CATCHPLAY(?=$|[\W_]) => -CatchPlay
+(?<=^|[\W_])playWEB(?=$|[\W_]) => -playWEB
+(?<=^|[\W_])friDay(?=$|[\W_]) => -friDay
+(?<=^|[\W_])Crunchyroll(?=$|[\W_]) => -CR
+(?<=^|[\W_])NF(?=$|[\W_]) => -Netflix
+(?<=^|[\W_])AMZN(?=$|[\W_]) => -Amazon
+(?<=^|[\W_])HMAX(?=$|[\W_]) => -MAX
+(?<=^|[\W_])MAX(?=$|[\W_]) => -MAX
+(?<=^|[\W_])ATVP(?=$|[\W_]) => -AppleTV+
+(?<=^|[\W_])DSNP(?=$|[\W_]) => -Disney+
+(?<=^|[\W_])iT(?=$|[\W_]) => -iTunes
+(?<=^|[\W_])PMSP\+(?=$|[\W_]) => -Paramount
+(?<=^|[\W_])Netflix(?=$|[\W_]) => -Netflix
+(?<=^|[\W_])Amazon(?=$|[\W_]) => -Amazon
+(?<=\W|^)AppleTV\+?(?=\W|$) => -AppleTV+
+(?<=\W|^)Disney\+?(?=\W|$) => -Disney+
+(?<=^|[\W_])iTunes(?=$|[\W_]) => -iTunes
+-SC => .
+-SCDIY => .
+-WF => .
+-404 => .
+Ftang => .
+樱桃小丸子第二期.*?\[(\d{4})\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
+斗破苍宆 => {[tmdbid=79481;type=tv]}.
+成何体统 (2024) => {[tmdbid=256783;type=tv]}.
+成何体统 (2026) => {[tmdbid=280632;type=tv]}.
+Perfect World => {[tmdbid=124003;type=tv]}.
