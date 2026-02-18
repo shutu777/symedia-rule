@@ -38,3 +38,6 @@ MyTVSuper.WEB-DL => WEB-DL
 @?{[tmdbid=203737;type=tv;s=3;e=1-11]} => {[s=1;e=EP+24]}
 # 葬送的芙莉莲
 @?{[tmdbid=209867;type=tv;s=2;e=1-28]} => {[s=1;e=EP+28]}
+# 百炼成神
+@?{[tmdbid=213791;type=tv;s=2;e=1-52]} => {[s=1;e=EP+52]}
+@?{[tmdbid=213791;type=tv;s=3;e=1-52]} => {[s=1;e=EP+104]}
