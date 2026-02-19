@@ -28,3 +28,9 @@ https://raw.githubusercontent.com/shutu777/symedia-rule/refs/heads/main/custom_r
 ## 📖 使用方式
 
 将对应的 Raw 链接复制到 Symedia 的自定义规则配置中即可。
+
+## 📖 自动刷新
+
+```
+https://github.com/shutu777/embyforge
+```
