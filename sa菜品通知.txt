@@ -12,7 +12,6 @@
         "{% if time_usage %}⏱️ 派送用时：{{ time_usage }}\n{% endif %}"
     )
 }
-
 {
     "title": "{% if action == '新入库' and media_type == '电影' %}🎬 {% elif action == '新入库' and media_type == '剧集' %}📺 {% elif action == '新入库' and media_type == '有声书' %}📚 {% elif action == '新入库' %}🆕 {% elif action == '测试' %}🧪 {% elif action == '开始播放' %}▶️ {% elif action == '停止播放' %}⏹️ {% elif action == '登录成功' %}✅ {% elif action == '登录失败' %}❌ {% elif action == '标记了' %}🏷️ {% endif %}{% if user_name %}【{{ user_name }}】{% endif %}{{ action }}{% if media_type == '电影' %}🎞️{% elif media_type == '剧集' %}📺{% endif %} {{ item_name }}{% if year %} ({{ year }}){% endif %}{% if season_episode %} {{ season_episode }}{% endif %}",
     "text": (
