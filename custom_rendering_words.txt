@@ -52,3 +52,6 @@ MyTVSuper.WEB-DL => WEB-DL
 @?{[tmdbid=12971;type=tv;s=1;e=254-291]} => {[s=9;e=EP-253]}
 # 龙珠gt
 @?{[tmdbid=12697;type=tv;s=1;e=65-66]} => {[s=0;e=EP-64]}
+# 一念永恒
+@?{[tmdbid=107371;type=tv;s=2;e=1-54]} => {[s=1;e=EP+52]}
+@?{[tmdbid=107371;type=tv;s=3;e=1-59]} => {[s=1;e=EP+106]}
