@@ -41,3 +41,12 @@ MyTVSuper.WEB-DL => WEB-DL
 # 百炼成神
 @?{[tmdbid=213791;type=tv;s=2;e=1-52]} => {[s=1;e=EP+52]}
 @?{[tmdbid=213791;type=tv;s=3;e=1-52]} => {[s=1;e=EP+104]}
+# 龙珠z
+@?{[tmdbid=12971;type=tv;s=1;e=40-74]} => {[s=2;e=EP-39]}
+@?{[tmdbid=12971;type=tv;s=1;e=75-107]} => {[s=3;e=EP-74]}
+@?{[tmdbid=12971;type=tv;s=1;e=108-139]} => {[s=4;e=EP-107]}
+@?{[tmdbid=12971;type=tv;s=1;e=140-165]} => {[s=5;e=EP-139]}
+@?{[tmdbid=12971;type=tv;s=1;e=166-194]} => {[s=6;e=EP-165]}
+@?{[tmdbid=12971;type=tv;s=1;e=195-219]} => {[s=7;e=EP-194]}
+@?{[tmdbid=12971;type=tv;s=1;e=220-253]} => {[s=8;e=EP-219]}
+@?{[tmdbid=12971;type=tv;s=1;e=254-291]} => {[s=9;e=EP-253]}
