@@ -38,3 +38,4 @@ Ftang => .
 成何体统 (2024) => {[tmdbid=256783;type=tv]}.
 成何体统 (2026) => {[tmdbid=280632;type=tv]}.
 Perfect World => {[tmdbid=124003;type=tv]}.
+快乐大本营 => {[tmdbid=33773;type=tv]}.
