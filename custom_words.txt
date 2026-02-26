@@ -33,11 +33,22 @@
 -WF => .
 -404 => .
 Ftang => .
-樱桃小丸子第二期.*?\[(\d{4})\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
-斗破苍宆 => {[tmdbid=79481;type=tv]}.
+
+# 电影
+Mother.*2009 => {[tmdbid=30018;type=movie]}.
+Resurrection.*2025 => {[tmdbid=878608;type=movie]}.
+
+# 剧集
 成何体统 (2024) => {[tmdbid=256783;type=tv]}.
 成何体统 (2026) => {[tmdbid=280632;type=tv]}.
 Perfect World => {[tmdbid=124003;type=tv]}.
-Resurrection.*2025 => {[tmdbid=878608;type=movie]}.
-Mother.*2009 => {[tmdbid=30018;type=movie]}.
-Chibi Maruko-chan II => {[tmdbid=57775;type=tv;s=2;]}.
+
+# 国漫
+斗破苍宆 => {[tmdbid=79481;type=tv]}.
+
+# 日漫
+# 樱桃小丸子
+樱桃小丸子第二期.*?\[(\d{4})\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
+Chibi Maruko-chan II.*?\[(\d+)\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
+# 哆啦A梦
+NewDoraemon哆啦A梦新番\[(\d+)\] => {[tmdbid=65733;type=tv;s=1;e=\1]}

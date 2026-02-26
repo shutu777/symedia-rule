@@ -23,6 +23,7 @@ iTunes.WEB-DL => WEB-DL
 friDay.WEB-DL => WEB-DL
 MyTVSuper.WEB-DL => WEB-DL
 \.(?:[0-5]\dfps|59fps|10-bit|10bit)
+
 # 关于我转生变成史莱姆这档事
 @?{[tmdbid=82684;type=tv;s=1;e=25-48]} => {[s=2;e=EP-24]}
 @?{[tmdbid=82684;type=tv;s=1;e=49-72]} => {[s=3;e=EP-48]}
