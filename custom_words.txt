@@ -40,3 +40,4 @@ Ftang => .
 Perfect World => {[tmdbid=124003;type=tv]}.
 Resurrection.*2025 => {[tmdbid=878608;type=movie]}.
 Mother.*2009 => {[tmdbid=30018;type=movie]}.
+Chibi Maruko-chan II => {[tmdbid=57775;type=tv;s=2;]}.
