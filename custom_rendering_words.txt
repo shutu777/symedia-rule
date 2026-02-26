@@ -60,3 +60,9 @@ MyTVSuper.WEB-DL => WEB-DL
 @?{[tmdbid=902;type=tv;s=3;e=1-47]} => {[s=1;e=EP+97]}
 @?{[tmdbid=902;type=tv;s=4;e=1-40]} => {[s=1;e=EP+144]}
 @?{[tmdbid=902;type=tv;s=5;e=1-40]} => {[s=1;e=EP+184]}
+# 文豪野犬
+@?{[tmdbid=65931;type=tv;s=2;e=1-12]} => {[s=1;e=EP+12]}
+@?{[tmdbid=65931;type=tv;s=3;e=1-12]} => {[s=1;e=EP+24]}
+@?{[tmdbid=65931;type=tv;s=2;e=13]} => {[s=0;e=EP-12]}
+@?{[tmdbid=65931;type=tv;s=4;e=1-13]} => {[s=1;e=EP+36]}
+@?{[tmdbid=65931;type=tv;s=5;e=1-11]} => {[s=1;e=EP+49]}
