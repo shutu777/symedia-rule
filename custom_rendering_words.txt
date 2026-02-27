@@ -76,3 +76,5 @@ MyTVSuper.WEB-DL => WEB-DL
 @?{[tmdbid=103254;type=tv;s=2;e=1-24]} => {[s=1;e=EP+24]}
 # 婚戒物语
 @?{[tmdbid=218493;type=tv;s=2;e=1-13]} => {[s=1;e=EP+12]}
+# 我的幸福婚姻
+@?{[tmdbid=196944;type=tv;s=2;e=1-13]} => {[s=1;e=EP+12]}
