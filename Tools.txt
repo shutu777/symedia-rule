@@ -1,0 +1,2 @@
+配合EmbyForge + Symeida整理
+油猴：`https://greasyfork.org/zh-CN/scripts/552585-%E5%BD%B1%E5%B7%A2-emby-115-%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B`
