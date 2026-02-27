@@ -70,3 +70,5 @@ MyTVSuper.WEB-DL => WEB-DL
 # 一念永恒
 @?{[tmdbid=107371;type=tv;s=2;e=1-54]} => {[s=1;e=EP+52]}
 @?{[tmdbid=107371;type=tv;s=3;e=1-59]} => {[s=1;e=EP+106]}
+# 再见，地球
+@?{[tmdbid=214587;type=tv;s=2;e=1-10]} => {[s=1;e=EP+10]}
