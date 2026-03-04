@@ -80,3 +80,5 @@ MyTVSuper.WEB-DL => WEB-DL
 @?{[tmdbid=196944;type=tv;s=2;e=1-13]} => {[s=1;e=EP+12]}
 # 皮奥里亚王子
 @?{[tmdbid=84111;type=tv;s=2;e=1-8]} => {[s=1;e=EP+8]}
+# 地狱乐
+@?{[tmdbid=117465;type=tv;s=2]} => {[s=1;e=EP+13]}
