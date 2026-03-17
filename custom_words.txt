@@ -53,4 +53,4 @@ Chibi Maruko-chan II.*?\[(\d+)\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
 # 哆啦A梦
 NewDoraemon哆啦A梦新番\[(\d+)\] => {[tmdbid=65733;type=tv;s=1;e=\1]}
 # 和青梅竹马之间不会有恋爱喜剧
-Osananajimi to wa Love Comedy ni Naranai => {[tmdbid=285743;type=tv]}.
+Osananajimi to wa Love Comedy ni Naranai => {[tmdbid=285743;type=tv;s=1;e=\1]}
