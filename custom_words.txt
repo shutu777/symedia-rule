@@ -54,3 +54,15 @@ Chibi Maruko-chan II.*?\[(\d+)\] => {[tmdbid=57775;type=tv;s=2;e=\1]}
 NewDoraemon哆啦A梦新番\[(\d+)\] => {[tmdbid=65733;type=tv;s=1;e=\1]}
 # 和青梅竹马之间不会有恋爱喜剧
 Osananajimi to wa Love Comedy ni Naranai => {[tmdbid=285743;type=tv;s=1;e=\1]}
+
+# 驯龙高手3 TMDB 166428
+驯龙高手3.*隐秘的世界.* => {[tmdbid=166428;type=movie]}.
+How\.to\.Train\.Your\.Dragon\.The\.Hidden\.World.* => {[tmdbid=166428;type=movie]}.
+
+# 夺宝奇兵2 TMDB 87
+夺宝奇兵2.* => {[tmdbid=87;type=movie]}.
+Indiana\.Jones.*Temple.*Doom.* => {[tmdbid=87;type=movie]}.
+
+# Michael Schenker Temple of Rock TMDB 399253
+Michael\.Schenker.*Temple.*Rock.* => {[tmdbid=399253;type=movie]}.
+摇滚殿堂神圣的使命.* => {[tmdbid=399253;type=movie]}.
