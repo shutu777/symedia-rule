@@ -42,6 +42,8 @@ Resurrection.*2025 => {[tmdbid=878608;type=movie]}.
 成何体统 (2024) => {[tmdbid=256783;type=tv]}.
 成何体统 (2026) => {[tmdbid=280632;type=tv]}.
 Perfect World => {[tmdbid=124003;type=tv]}.
+搜神记 (2026) => {[tmdbid=233291;type=tv]}.
+{[tmdbid=317329;type=tv]} => {[tmdbid=233291;type=tv]}.
 
 # 国漫
 斗破苍宆 => {[tmdbid=79481;type=tv]}.
