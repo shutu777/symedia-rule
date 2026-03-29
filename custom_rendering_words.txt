@@ -13,7 +13,7 @@
 (?i)\.x264(?=[\W_]) => .AVC
 (?i)\.x265(?=[\W_]) => .HEVC
 Netflix.WEB-DL => WEB-DL
-Amazon Prime.WEB-DL => WEB-DL
+Amazon Prime.WEB-DL => Amazon.WEB-DL
 AppleTV.WEB-DL => WEB-DL
 Disney.WEB-DL => WEB-DL
 IQ.WEB-DL => WEB-DL
@@ -21,8 +21,10 @@ KKTV.WEB-DL => WEB-DL
 TVING.WEB-DL => WEB-DL
 iTunes.WEB-DL => WEB-DL
 friDay.WEB-DL => WEB-DL
-MyTVSuper.WEB-DL => WEB-DL
+#清理sa元数据提取的无用变量
 \.(?:[0-5]\dfps|59fps|10-bit|10bit)
+#DV或Dovi统一识别为Dovi
+(?i)(?<=[\W_])(DV|DoVi)\s+P(?:[4-9]|10)(?=[\W_])|(?<![A-Za-z])DV(?![A-Za-z]) => DoVi
 
 # 关于我转生变成史莱姆这档事
 @?{[tmdbid=82684;type=tv;s=1;e=25-48]} => {[s=2;e=EP-24]}

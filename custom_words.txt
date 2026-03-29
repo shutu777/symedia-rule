@@ -1,3 +1,4 @@
+#-----流媒体-----
 (?<=^|[\W_])Baha(?=$|[\W_]) => -Baha
 (?<=^|[\W_])KKTV(?=$|[\W_]) => -KKTV
 (?<=^|[\W_])Hami(?=$|[\W_]) => -Hami
@@ -28,11 +29,36 @@
 (?<=\W|^)AppleTV\+?(?=\W|$) => -AppleTV+
 (?<=\W|^)Disney\+?(?=\W|$) => -Disney+
 (?<=^|[\W_])iTunes(?=$|[\W_]) => -iTunes
--SC => .
--SCDIY => .
--WF => .
--404 => .
-Ftang => .
+#-----杜比相关识别词-----
+(?i)DV\s*P(?:[4-9]|10)\.HDR => DoVi.HDR
+(?i)DoVi\s*P(?:[4-9]|10)\.HDR => DoVi.HDR
+(?i)HDR10\+[._\-\s]+DV => DoVi.HDR10+
+(?i)HDR10\+[._\-\s]+DoVi => DoVi.HDR10+
+(?i)HDR[._\-\s]+DV => DoVi.HDR
+(?i)HDR[._\-\s]+DoVi => DoVi.HDR
+(?i)HDR10[._\-\s]+DV => DoVi.HDR10
+(?i)HDR10[._\-\s]+DoVi => DoVi.HDR10
+(?i)HDRplus[._\-\s]+DV => DoVi.HDRplus
+(?i)HDRplus[._\-\s]+DoVi => DoVi.HDRplus
+(?i)HDR[._\-\s&]+DV|DV[._\-\s&]+HDR => DoVi.HDR
+(?i)HDR[._\-\s&]+DoVi|DoVi[._\-\s&]+HDR => DoVi.HDR
+(?i)HDR10[._\-\s&]+DV|DV[._\-\s&]+HDR10 => DoVi.HDR10
+(?i)HDR10[._\-\s&]+DoVi|DoVi[._\-\s&]+HDR10 => DoVi.HDR10
+(?i)HDR10\+[._\-\s&]+DV|DV[._\-\s&]+HDR10\+ => DoVi.HDR10+
+(?i)HDR10\+[._\-\s&]+DoVi|DoVi[._\-\s&]+HDR10\+ => DoVi.HDR10+
+(?i)(?<![A-Za-z0-9])DV(?![A-Za-z0-9]) => DoVi
+
+下载请访问 =>
+-HiveWeb =>
+-MAX@HiveWeb =>
+-老K =>
+-LGNB@oSpecialCN => -LGNB
+-SC =>
+-SCDIY =>
+-WF =>
+-404 =>
+Ftang =>
+-Ocat =>
 
 # 电影
 Mother.*2009 => {[tmdbid=30018;type=movie]}.
