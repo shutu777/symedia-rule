@@ -85,7 +85,6 @@ Perfect World => {[tmdbid=124003;type=tv]}.
 斗破苍宆 => {[tmdbid=79481;type=tv]}.
 # 搜神记
 Legacy.of.the.Divine => {[tmdbid=233291;type=tv]}
-搜神记 => {[tmdbid=233291;type=tv]}
 
 # 日漫
 # 樱桃小丸子

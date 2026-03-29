@@ -84,3 +84,5 @@ friDay.WEB-DL => WEB-DL
 @?{[tmdbid=84111;type=tv;s=2;e=1-8]} => {[s=1;e=EP+8]}
 # 地狱乐
 @?{[tmdbid=117465;type=tv;s=2]} => {[s=1;e=EP+13]}
+# 搜神记
+@?{[tmdbid=317329;type=tv]} => {[tmdbid=233291;type=tv;s=1]}
