@@ -88,3 +88,4 @@ friDay.WEB-DL => WEB-DL
 @?{[tmdbid=317329;type=tv]} => {[tmdbid=233291;type=tv;s=1]}
 # 航海王
 @?{[tmdbid=37854;type=tv;s=23;e=1-50]} => {[s=23;e=EP+1155]}
+@?{[tmdbid=37854;type=tv;s=1;e=1156-1206]} => {[s=23;e=EP+0]}
