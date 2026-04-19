@@ -187,6 +187,4 @@ friDay.WEB-DL => WEB-DL
 # 航海王
 @?{[tmdbid=37854;type=tv;s=1;e=1156-1201]} => {[s=23;e=EP+0]}
 @?{[tmdbid=37854;type=tv;s=23;e=1-50]} => {[s=23;e=EP+1155]}
-# 一叠间漫画咖啡屋生活
-Ichijouma Mankitsugurashi => {[tmdbid=295751;type=tv;s=1]}
 
