@@ -91,4 +91,14 @@ friDay.WEB-DL => WEB-DL
 # 航海王
 @?{[tmdbid=37854;type=tv;s=1;e=1156-1201]} => {[s=23;e=EP+0]}
 @?{[tmdbid=37854;type=tv;s=23;e=1-50]} => {[s=23;e=EP+1155]}
-
+# 银魂
+@?{[tmdbid=57041;type=tv;s=1;e=50-99]} => {[s=2;e=EP-49]}
+@?{[tmdbid=57041;type=tv;s=1;e=100-150]} => {[s=3;e=EP-99]}
+@?{[tmdbid=57041;type=tv;s=1;e=151-201]} => {[s=4;e=EP-150]}
+@?{[tmdbid=57041;type=tv;s=1;e=202-252]} => {[s=5;e=EP-201]}
+@?{[tmdbid=57041;type=tv;s=1;e=253-265]} => {[s=6;e=EP-252]}
+@?{[tmdbid=57041;type=tv;s=1;e=266-316]} => {[s=7;e=EP-265]}
+@?{[tmdbid=57041;type=tv;s=1;e=317-328]} => {[s=8;e=EP-316]}
+@?{[tmdbid=57041;type=tv;s=1;e=329-341]} => {[s=9;e=EP-328]}
+@?{[tmdbid=57041;type=tv;s=1;e=342-353]} => {[s=10;e=EP-341]}
+@?{[tmdbid=57041;type=tv;s=1;e=354-367]} => {[s=11;e=EP-353]}
