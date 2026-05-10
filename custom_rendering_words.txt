@@ -104,3 +104,5 @@ friDay.WEB-DL => WEB-DL
 @?{[tmdbid=57041;type=tv;s=1;e=354-367]} => {[s=11;e=EP-353]}
 # 妻子的浪漫旅行
 @?{[tmdbid=97199;type=tv;s=9;e=1-10]} => {[s=8;e=EP-0]}
+# 宇宙啦啦队
+@?{[tmdbid=316013;type=tv;s=1]}  => {[tmdbid=316099;type=tv;s=1]}
