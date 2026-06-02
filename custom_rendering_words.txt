@@ -112,3 +112,4 @@ friDay.WEB-DL => WEB-DL
 @?{[tmdbid=318041;type=tv;s=1]} => {[tmdbid=314647;type=tv;s=1]}
 # 爱书的下克上：为了成为图书管理员不择手段！
 @?{[tmdbid=91768;type=tv;s=1;e=37-48]} => {[s=2;e=EP-36]}
+#
