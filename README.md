@@ -7,7 +7,6 @@
 ## 🔤 自定义识别词
 
 ```
-https://raw.githubusercontent.com/shenxianmq/SymediaGroupRe/refs/heads/main/GroupRe.txt
 https://raw.githubusercontent.com/shutu777/symedia-rule/refs/heads/main/custom_words.txt
 ```
 
