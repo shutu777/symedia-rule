@@ -1,3 +1,5 @@
+# TG 通知主题模板合集 v2
+
 # ☯️ 天机阁主题（最终版）
 
 ## 标题模板
@@ -11,25 +13,25 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}📜 天机阁密报{{else}}{{if eq .MediaType "tv"}}📚 此卷与阁下有缘{{else}}📖 此法与阁下有缘{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}📜 天机阁密报{{else}}{{if eq .MediaType "tv"}}📚 此卷与阁下有缘{{else}}📖 此法与阁下有缘{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}🕯️ 阁中异动｜{{.Episodes}}{{else}}🕯️ 藏经阁开启{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🌌 天机再动{{else}}{{if .Episodes}}🕯️ 阁中异动{{else}}🕯️ 藏经阁开启{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 4
 
 ```gotemplate
-{{if .AIUsed}}🌌 观星结果已出{{else}}🌌 今夜星象有变{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🌌 观星结果已出{{else}}{{if eq .MediaType "tv"}}🌌 今夜星象有变{{else}}🌌 星盘照见新卷{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 5
 
 ```gotemplate
-{{if .Episodes}}📦 机缘已送达{{else}}📦 有缘之物现世{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🔮 机缘由天机推送{{else}}{{if .Episodes}}📦 机缘已送达{{else}}📦 有缘之物现世{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
@@ -111,16 +113,29 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}📡 战场数据已回传{{else}}🚀 目标区域发现快乐信号{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}📡 战场数据已回传{{else}}{{if .Episodes}}🚀 目标区域发现剧集信号{{else}}🚀 目标区域发现快乐信号{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if eq .MediaType "tv"}}🚀 本轮火力覆盖完成{{else}}🚀 战略打击任务完成{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🎯 火控校准完毕{{else}}{{if eq .MediaType "tv"}}🚀 本轮火力覆盖完成{{else}}🚀 战略打击任务完成{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🛰 卫星制导已上线{{else}}{{if .Episodes}}🚀 新一轮精准投送{{else}}🚀 观众同志请立即接收{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}🎯 智能火控锁定目标{{else}}{{if eq .MediaType "tv"}}🚀 该看的剧，一集没跑掉{{else}}🚀 该看的片，一部没跑掉{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -170,16 +185,29 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}📜 江湖秘闻录{{else}}⚔️ 江湖急报{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}📜 江湖秘闻录{{else}}{{if .Episodes}}⚔️ 江湖急报，新回已至{{else}}⚔️ 江湖急报，名作入世{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}📖 新卷入世{{else}}📚 武林新录{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🕵️ 百晓生已校录{{else}}{{if .Episodes}}📖 新卷入世{{else}}📚 武林新录{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🕵️ 暗探飞书已至{{else}}{{if .Episodes}}🐎 快马加鞭送新章{{else}}📜 武林帖已送达{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}📖 百晓生重新排榜{{else}}{{if eq .MediaType "tv"}}⚔️ 少侠，追更了{{else}}⚔️ 少侠，此片可观{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -229,16 +257,29 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}🧠 检测到异常娱乐源{{else}}{{if .Episodes}}📡 新剧集信号捕获成功{{else}}📡 新电影信号捕获成功{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🧠 检测到异常娱乐源{{else}}{{if .Episodes}}📡 新剧集信号捕获成功{{else}}📡 新电影信号捕获成功{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .AIUsed}}⚡ AI数据库开始暴走{{else}}🤖 算法认为你会喜欢{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}⚡ AI数据库开始暴走{{else}}{{if eq .MediaType "tv"}}🤖 算法认为你会追下去{{else}}🤖 算法认为你会喜欢{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🧬 模型自我进化完成{{else}}{{if .Episodes}}📡 新一集快乐样本入库{{else}}📡 新电影快乐样本入库{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}⚠️ 人类娱乐计划升级{{else}}{{if eq .MediaType "tv"}}🤖 检测到高浓度电子榨菜{{else}}🤖 检测到高价值观影样本{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -272,6 +313,9 @@
 📥 **数据来源：**{{.SrcPath}}{{end}}{{if .DestPath}}
 📤 **存储位置：**{{.DestPath}}{{end}}
 ```
+
+---
+
 # 🏛 稷下学宫主题（最终版）
 
 ## 标题模板
@@ -285,14 +329,27 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}📜 稷下密卷解读完成{{else}}📖 今日教材已发放{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}📜 稷下密卷解读完成{{else}}{{if .Episodes}}📖 今日教材已发放{{else}}📖 镇馆典籍已发放{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}🎓 学员请入座{{else}}🏛 典籍入库{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🪶 夫子加急批阅{{else}}{{if .Episodes}}🎓 学员请入座{{else}}🏛 典籍入库{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🧠 稷下机关术已验算{{else}}{{if .Episodes}}🪶 夫子点名，新课开卷{{else}}🪶 夫子点名，典籍入阁{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}📚 学宫智库完成补全{{else}}{{if eq .MediaType "tv"}}🎓 今日课业请及时研习{{else}}🎓 今日典籍请及时研习{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -342,14 +399,27 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}📡 伟大航路来信{{else}}⚓ 船长请查收{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}📡 伟大航路来信{{else}}{{if .Episodes}}⚓ 船长请查收，新航段抵达{{else}}⚓ 船长请查收，新宝藏入舱{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}🗺 海图已更新{{else}}🌎 新大陆发现{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🧭 记录指针已校准{{else}}{{if .Episodes}}🗺 海图已更新{{else}}🌎 新大陆发现{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🔭 瞭望手发现异常航迹{{else}}{{if .Episodes}}🏴‍☠️ 新航段已抵达{{else}}🏴‍☠️ 新宝藏已入舱{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}🧭 记录指针疯狂转动{{else}}{{if eq .MediaType "tv"}}⚓ 船员集合，继续追航{{else}}⚓ 船员集合，准备观影{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -399,14 +469,27 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}👻 今日新增卷宗{{else}}📖 阴司档案更新{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}👻 今日新增卷宗{{else}}{{if .Episodes}}📖 阴司档案追加一页{{else}}📖 阴司档案更新{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}⚰ 新亡魂已登记{{else}}🏮 地府来信{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}⚖ 判官加急复核{{else}}{{if .Episodes}}⚰ 新亡魂已登记{{else}}🏮 地府来信{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
+
+### 方案 4
+
+```gotemplate
+{{if .AIUsed}}🧾 阴司系统自动判卷{{else}}{{if .Episodes}}👻 今日KPI又涨了{{else}}👻 今日业绩已到账{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
+### 方案 5
+
+```gotemplate
+{{if .AIUsed}}⚖ 判官：此案有AI痕迹{{else}}{{if eq .MediaType "tv"}}🏮 黑白无常催你追更{{else}}🏮 黑白无常催你观影{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
+```
+
 
 ## 正文模板
 
@@ -440,6 +523,9 @@
 📥 **阳间来源：**{{.SrcPath}}{{end}}{{if .DestPath}}
 📤 **轮回去向：**{{.DestPath}}{{end}}
 ```
+
+---
+
 # 🧋 奶茶店主题（最终版）
 
 ## 标题模板
@@ -453,25 +539,25 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}✨ 隐藏菜单已解锁{{else}}🥤 奶茶已出杯{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}✨ 隐藏菜单已解锁{{else}}{{if .Episodes}}🥤 本杯加更已出杯{{else}}🥤 奶茶已出杯{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}🍰 今日限定供应{{else}}🧁 新品试营业{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🛎 店员偷偷推荐{{else}}{{if .Episodes}}🍰 今日限定供应{{else}}🧁 新品试营业{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 4
 
 ```gotemplate
-{{if .AIUsed}}🛎 店员特别推荐{{else}}🍹 请及时取餐{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🛎 店员特别推荐{{else}}{{if eq .MediaType "tv"}}🍹 追剧奶茶请及时取餐{{else}}🍹 观影奶茶请及时取餐{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 5
 
 ```gotemplate
-{{if .Episodes}}🎂 本日快乐补给{{else}}🍬 甜度超标预警{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🤖 店长判定值得加料{{else}}{{if .Episodes}}🎂 本日快乐补给{{else}}🍬 甜度超标预警{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
@@ -524,25 +610,25 @@
 ### 方案 2
 
 ```gotemplate
-{{if .AIUsed}}💎 欧气检测通过{{else}}🎰 十连出金了{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}💎 欧气检测通过{{else}}{{if .Episodes}}🎰 单抽出金，新章到账{{else}}🎰 十连出金了{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 3
 
 ```gotemplate
-{{if .Episodes}}🌈 彩光闪过{{else}}⭐ 金光一闪{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🎲 概率被AI改写{{else}}{{if .Episodes}}🌈 彩光闪过{{else}}⭐ 金光一闪{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 4
 
 ```gotemplate
-{{if .AIUsed}}🎊 特殊概率触发{{else}}🎉 恭喜获得限定内容{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🎊 特殊概率触发{{else}}{{if eq .MediaType "tv"}}🎉 恭喜获得限定剧情{{else}}🎉 恭喜获得限定内容{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ### 方案 5
 
 ```gotemplate
-{{if .Episodes}}🎮 主线奖励到账{{else}}🏆 收藏图鉴更新{{end}}{{if .Title}}｜{{.Title}}{{end}}
+{{if .AIUsed}}🎁 隐藏保底已触发{{else}}{{if .Episodes}}🎮 主线奖励到账{{else}}🏆 收藏图鉴更新{{end}}{{end}}{{if .Title}}｜{{.Title}}{{end}}{{if .Episodes}} {{.Episodes}}{{end}}{{if .Year}} ({{.Year}}){{end}}
 ```
 
 ---
