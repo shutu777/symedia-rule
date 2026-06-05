@@ -60,7 +60,7 @@
 
 ⏱️ **耗费时辰：**{{.Duration}}{{if .RecognizeDuration}}
 🔍 **观星推演：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-👁️ **神识探查：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+👁️ **神识探查：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **收入阁中：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **静候天时：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📚 **卷宗数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -161,7 +161,7 @@
 
 ⏱️ **发射耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🎯 **目标锁定：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-📡 **卫星扫描：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+📡 **卫星扫描：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **弹头投送：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **待命时间：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📄 **弹药数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -233,7 +233,7 @@
 
 ⏱️ **缉拿耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🔍 **线索追查：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-🎞️ **卷宗勘验：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+🎞️ **卷宗勘验：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **入档登记：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **候审时长：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📚 **卷宗数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -305,7 +305,7 @@
 
 ⏱️ **运行时长：**{{.Duration}}{{if .RecognizeDuration}}
 🔎 **特征识别：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-🎞️ **媒体解析：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+🎞️ **媒体解析：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **数据写入：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **IO等待：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📄 **数据包数：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -375,7 +375,7 @@
 
 ⏱️ **温书耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🔍 **典籍考证：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-👁️ **内容校验：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+👁️ **内容校验：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📚 **收入书阁：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **等候批阅：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📄 **典籍数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -445,7 +445,7 @@
 
 ⏱️ **航行耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🧭 **海图校准：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-🔭 **瞭望侦查：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+🔭 **瞭望侦查：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **货物入仓：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **等待靠岸：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📄 **货物数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -515,7 +515,7 @@
 
 ⏱️ **审理耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🔍 **生平调查：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-👁️ **因果回溯：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+👁️ **因果回溯：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **卷宗归档：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **排队投胎：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📚 **卷宗数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -586,7 +586,7 @@
 
 ⏱️ **制作耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🍓 **食材准备：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-👨‍🍳 **品质检测：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+👨‍🍳 **品质检测：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 🥤 **装杯完成：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **排队取餐：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📦 **订单数量：**{{.FileCount}}{{end}}{{if .FileSize}}
@@ -657,7 +657,7 @@
 
 ⏱️ **出货耗时：**{{.Duration}}{{if .RecognizeDuration}}
 🔍 **卡池检索：**{{.RecognizeDuration}}{{end}}{{if .FFprobeDuration}}
-🎞️ **资源解析：**{{.FFprobeDuration}}{{end}}{{if .TransferDuration}}
+🎞️ **资源解析：**{{.FFprobeDuration}}{{if .FFprobeCount}}（{{.FFprobeCount}}次）{{end}}{{end}}{{if .PrepareDuration}}
 📦 **奖励发放：**{{.TransferDuration}}{{end}}{{if .WaitDuration}}
 ⏳ **等待开奖：**{{.WaitDuration}}{{end}}{{if gt .FileCount 1}}
 📄 **获得数量：**{{.FileCount}}{{end}}{{if .FileSize}}
